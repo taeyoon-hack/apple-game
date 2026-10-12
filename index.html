@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f2e9">
+    <title>사과를 모아 10</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+    <main class="game-shell">
+      <header class="masthead">
+        <p class="edition"><span class="edition-mark" aria-hidden="true">✳</span> ORCHARD ARCADE <span>NO. 08</span></p>
+        <div class="title-row">
+          <div>
+            <p class="eyebrow">오늘의 수확</p>
+            <h1>사과를 모아 <span>10</span></h1>
+          </div>
+          <div class="apple-stamp" aria-hidden="true">🍎</div>
+        </div>
+        <p class="deck">이웃한 숫자를 이어 합이 10의 배수가 되면 수확!</p>
+      </header>
+
+      <section class="game-panel" aria-label="사과 숫자 게임">
+        <div class="scoreboard">
+          <div class="score-block current-score">
+            <span class="metric-label">이번 점수</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="score-divider" aria-hidden="true"></div>
+          <div class="score-block best-score">
+            <span class="metric-label">최고 기록</span>
+            <strong id="best-score">0</strong>
+          </div>
+          <div class="timer-block" id="timer-block" aria-live="off">
+            <span class="metric-label">남은 시간</span>
+            <strong id="timer">01:00</strong>
+          </div>
+        </div>
+
+        <div class="play-area">
+          <div class="board-heading">
+            <div class="round-indicator"><span></span> ROUND 01</div>
+            <div class="selection-readout" aria-live="polite">
+              <span id="selection-label">합계</span>
+              <strong id="selection-sum">0</strong>
+            </div>
+          </div>
+          <div class="board-frame">
+            <div id="board" class="board" role="grid" aria-label="8행 8열 사과 숫자 격자"></div>
+          </div>
+          <div class="play-footer">
+            <p id="game-message" class="game-message" aria-live="polite">시작을 누르고 수확을 시작하세요.</p>
+            <button id="start-button" class="start-button" type="button">
+              <span id="start-button-label">게임 시작</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <span>8 × 8 ORCHARD</span>
+        <span>1–9 APPLES · MULTIPLES OF 10</span>
+      </footer>
+    </main>
+  </body>
+</html>
